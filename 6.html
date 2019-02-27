@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task 6</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    function frame(array, index) {
+      var row_number = array.length;
+      var max_word_length = 0
+
+      for (i=0;i<array.length;i++){
+        if (array[i].length > max_word_length) {
+          max_word_length = array[i].length;
+        }
+      }
+    max_word_length = max_word_length + 4;
+
+    for (i=0;i<max_word_length;i++) {
+      console.log(index);
+    };
+
+    for (i=0;i<array.length;i++){
+      var current_line = '';
+      var missing_sumbols = max_word_length - array[i].length -3;
+      current_line = index + ' ' + array[i];
+        for (j=0;j<missing_sumbols;j++) {
+          current_line += ' ';
+        }
+        current_line += index;
+        console.log(current_line);
+    }
+
+    for (i=0;i<max_word_length;i++) {
+      console.log(index);
+    }
+
+    };
+
+      frame(['Create', 'a', 'frame'], '+');
+  </script>
+</head>
+<body>
+</body>
+</html>

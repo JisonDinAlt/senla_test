@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task 3</title>
+  <style>
+  .input {
+    padding-left: 150px;
+    padding-top: 100px;
+  }
+  .output {
+    padding-left: 150px;
+    padding-top: 10px;
+  }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    function getString() {
+      var input = document.getElementById('input_field').value
+      var word_array = input.split(' ');
+      var numeric_array = [];
+      var min_numeric = '';
+      var result = document.getElementById('output_field');
+        for (var i = 0; i < word_array.length; i++ ) {
+          numeric_array[i] = word_array[i].length;
+        };
+        numeric_array.sort(compareNumeric);
+        if (result) {
+          $('#output_field').empty();
+          result.append("Result: " + numeric_array[0]);
+        };
+    };
+    function compareNumeric(a, b) {
+      return a - b;
+    };
+  </script>
+</head>
+<body>
+  <div class="input">
+  <form id="input_form" action="#" >
+    <label for="input_field">Please insert row</label>
+    <input id="input_field" type="text">
+    <input id="submit" type="button" value="Submit" onclick="getString()">
+  </form>
+  </div>
+  <div class="output" id="output_field">
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task 6</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    function createHolder(index) {
+      var o = {};
+      o.value = index;
+      o.getValue = function () {
+        console.log(o.value);
+      }
+      o.setValue = function (val) {
+        o.value = val;
+      }
+      return o;
+    };
+    var obj = createHolder(5)
+obj.getValue() // returns 5
+obj.setValue(2)
+obj.getValue() // returns 2
+  </script>
+</head>
+<body>
+</body>
+</html>

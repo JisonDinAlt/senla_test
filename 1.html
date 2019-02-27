@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        function getNumber() {
+            var input = document.getElementById('input_field').value
+            var result = document.getElementById('output_field')
+            if (result) {
+                for (var i = 1; i <= input; i++) {
+                    result.append(i + ' sheep...');
+                };
+                result.innerHTML += ('<br>');
+            }
+        }
+    </script>
+</head>
+​
+<body>
+    <div class="input">
+        <form id="input_form" action="#">
+            <input id="input_field" type="number">
+            <input id="submit" type="button" value="Submit" onclick="getNumber()">
+        </form>
+    </div>
+    <div class="output_form" id="output_field">
+    </div>
+</body>
+​
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task 5</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript">
+    function getLowerestIndex(array, index) {
+      var result = array;
+      var result_index = 0;
+      result.push(index);
+      result.sort(compareNumeric);
+      result_index = result.indexOf(index);
+      console.log(result_index);
+    };
+
+    function compareNumeric(a, b) {
+      return a - b;
+    };
+      getLowerestIndex([1,2,3,4], 1.5);
+  </script>
+</head>
+<body>
+</body>
+</html>
